@@ -38,4 +38,13 @@ public class CarTest {
         blade.play(4);
         assertThat(blade.hasPosition(1)).isTrue();
     }
+
+    @Test
+    void position만큼dash출력(){
+        Car blade = new Car(new Name("blade"));
+        blade.play(5);
+        blade.play(5);
+        blade.play(5);
+        assertThat(blade.getPositionDash()).isEqualTo("----");
+    }
 }
